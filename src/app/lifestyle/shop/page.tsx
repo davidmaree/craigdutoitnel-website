@@ -12,27 +12,18 @@ export default function LifestyleShopPage() {
   const filtered =
     activeCategory === "all"
       ? lifestyleProducts.filter((p) => p.isActive)
-      : lifestyleProducts.filter(
-          (p) => p.isActive && p.category === activeCategory
-        );
+      : lifestyleProducts.filter((p) => p.isActive && p.category === activeCategory);
 
   return (
-    <div className="pt-20 min-h-screen bg-white">
+    <div className="pt-24 min-h-screen bg-white">
       {/* Header */}
       <div
         className="py-16 text-center"
-        style={{
-          background:
-            "linear-gradient(135deg, #F0FAFB 0%, #B2EBF2 60%, #E0F7FA 100%)",
-        }}
+        style={{ background: "linear-gradient(145deg, #EFF6FF 0%, #BFDBFE 60%, #DBEAFE 100%)" }}
       >
-        <p className="font-mono text-xs tracking-widest text-teal-600 uppercase mb-2">
-          Craig Lifestyle
-        </p>
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-teal-900">
-          The Glow Shop
-        </h1>
-        <p className="font-sans text-teal-700/60 mt-3 text-sm">
+        <p className="font-mono text-xs tracking-widest text-blue-500 uppercase mb-2">Craig Lifestyle</p>
+        <h1 className="font-display text-4xl md:text-5xl font-bold text-blue-900">The Glow Shop</h1>
+        <p className="font-sans text-blue-600/60 mt-3 text-sm">
           {lifestyleProducts.filter((p) => p.isActive).length} products
         </p>
       </div>
@@ -46,8 +37,8 @@ export default function LifestyleShopPage() {
               onClick={() => setActiveCategory(cat)}
               className={`px-5 py-2 rounded-full text-xs font-sans font-semibold capitalize transition-all duration-200 ${
                 activeCategory === cat
-                  ? "bg-teal-600 text-white shadow-md"
-                  : "bg-teal-50 text-teal-700 hover:bg-teal-100 border border-teal-200"
+                  ? "bg-blue-500 text-white shadow-md"
+                  : "bg-blue-50 text-blue-600 hover:bg-blue-100 border border-blue-200"
               }`}
             >
               {cat === "all" ? "All Products" : cat}
@@ -55,18 +46,13 @@ export default function LifestyleShopPage() {
           ))}
         </div>
 
-        {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filtered.map((product, i) => (
-            <ProductCard key={product.id} product={product} index={i} />
-          ))}
+          {filtered.map((p, i) => <ProductCard key={p.id} product={p} index={i} />)}
         </div>
 
         {filtered.length === 0 && (
           <div className="text-center py-20">
-            <p className="font-display text-2xl text-charcoal/40">
-              No products in this category yet.
-            </p>
+            <p className="font-display text-2xl text-charcoal/40">No products in this category yet.</p>
           </div>
         )}
       </div>

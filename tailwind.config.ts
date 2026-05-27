@@ -9,51 +9,56 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Lighter pink for Slimming
         pink: {
-          100: "#FFE4EC",
-          200: "#FFB6C1",
-          300: "#FF8FAB",
-          400: "#FF6B8A",
-          500: "#E85577",
+          50:  "#FFF5F9",
+          100: "#FFE8F2",
+          200: "#FFCFE5",
+          300: "#FFB0D4",
+          400: "#FF85BB",
+          500: "#F45FA0",   // primary CTA — lighter than before
+          600: "#D94080",
         },
-        teal: {
-          100: "#E0F7FA",
-          200: "#B2EBF2",
-          300: "#80DEEA",
-          400: "#4DD0E1",
-          500: "#00838F",
+        // Blue for Lifestyle
+        blue: {
+          50:  "#EFF6FF",
+          100: "#DBEAFE",
+          200: "#BFDBFE",
+          300: "#93C5FD",
+          400: "#60A5FA",
+          500: "#3B82F6",
+          600: "#2563EB",
+          700: "#1D4ED8",
         },
         charcoal: "#1A1A2E",
-        "bg-soft": "#FFF5F7",
-        "grey-soft": "#F8F8F8",
+        "bg-soft": "#FAFAFA",
+        "grey-soft": "#F5F5F5",
         "grey-mid": "#9E9E9E",
+        white: "#FFFFFF",
       },
       fontFamily: {
         display: ["var(--font-cormorant)", "Georgia", "serif"],
-        sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
-        mono: ["var(--font-space-mono)", "monospace"],
+        sans:    ["var(--font-dm-sans)", "system-ui", "sans-serif"],
+        mono:    ["var(--font-space-mono)", "monospace"],
       },
       animation: {
-        "float": "float 6s ease-in-out infinite",
+        float:        "float 6s ease-in-out infinite",
         "pulse-soft": "pulse-soft 3s ease-in-out infinite",
-        "shimmer": "shimmer 2s linear infinite",
+        shimmer:      "shimmer 2s linear infinite",
       },
       keyframes: {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-20px)" },
+          "50%":       { transform: "translateY(-20px)" },
         },
         "pulse-soft": {
           "0%, 100%": { opacity: "0.6" },
-          "50%": { opacity: "1" },
+          "50%":       { opacity: "1" },
         },
         shimmer: {
-          "0%": { backgroundPosition: "-200% 0" },
+          "0%":   { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
         },
-      },
-      backdropBlur: {
-        xs: "2px",
       },
     },
   },
