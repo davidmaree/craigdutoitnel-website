@@ -55,7 +55,7 @@ export default function SlimmingPage() {
               { icon: <ShieldCheck  className="w-6 h-6 text-pink-500" />, title: "Safe & Tested",         desc: "Fully tested and certified — because your health and safety come before everything." },
             ].map((item, i) => (
               <div key={i} className="p-8 rounded-2xl bg-white border border-pink-100 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 rounded-xl bg-pink-50 flex items-center justify-center mb-5">{item.icon}</div>
+                <div className="mb-5">{item.icon}</div>
                 <h3 className="font-display text-xl font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="font-sans text-sm text-grey-mid leading-relaxed">{item.desc}</p>
               </div>
@@ -98,7 +98,7 @@ export default function SlimmingPage() {
                 href={`/slimming/shop?category=${cat}`}
                 className="group flex flex-col items-center gap-2 p-6 bg-white rounded-2xl border border-pink-100 hover:border-pink-300 hover:shadow-md transition-all duration-200"
               >
-                <div className="w-11 h-11 rounded-xl bg-pink-50 flex items-center justify-center">{icon}</div>
+                {icon}
                 <span className="font-sans font-medium text-sm text-charcoal group-hover:text-pink-500">{label}</span>
               </Link>
             ))}

@@ -59,9 +59,7 @@ export default function HomePage() {
                 key={i}
                 className={`p-8 rounded-2xl bg-white border ${p.border} hover:shadow-md transition-shadow duration-300`}
               >
-                <div className={`w-12 h-12 rounded-xl ${p.iconBg} flex items-center justify-center mb-5`}>
-                  {p.icon}
-                </div>
+                <div className="mb-5">{p.icon}</div>
                 <h3 className="font-display text-xl font-semibold text-charcoal mb-3">{p.title}</h3>
                 <p className="font-sans text-sm text-grey-mid leading-relaxed">{p.desc}</p>
               </div>

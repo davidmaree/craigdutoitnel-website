@@ -59,7 +59,7 @@ export default function LifestylePage() {
               { icon: <Star       className="w-6 h-6 text-blue-500" />, title: "Salon Results",  desc: "Professional-grade results you can achieve at home, every day." },
             ].map((item, i) => (
               <div key={i} className="p-8 rounded-2xl bg-white border border-blue-100 hover:shadow-md transition-shadow">
-                <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-5">{item.icon}</div>
+                <div className="mb-5">{item.icon}</div>
                 <h3 className="font-display text-xl font-semibold text-charcoal mb-2">{item.title}</h3>
                 <p className="font-sans text-sm text-grey-mid leading-relaxed">{item.desc}</p>
               </div>
@@ -102,7 +102,7 @@ export default function LifestylePage() {
                 href={`/lifestyle/shop?category=${cat}`}
                 className="group flex flex-col items-center gap-2 p-6 bg-white rounded-2xl border border-blue-100 hover:border-blue-300 hover:shadow-md transition-all duration-200"
               >
-                <div className="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center">{icon}</div>
+                {icon}
                 <span className="font-sans font-medium text-sm text-charcoal group-hover:text-blue-600">{label}</span>
               </Link>
             ))}

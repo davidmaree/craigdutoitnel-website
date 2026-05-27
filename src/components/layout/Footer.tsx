@@ -70,7 +70,7 @@ export function Footer() {
               <a
                 href="https://www.instagram.com/craig_du_toit_nel"
                 target="_blank" rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white/60 hover:bg-pink-500 hover:text-white text-charcoal/60 border border-pink-200 transition-colors"
+                className="text-charcoal/50 hover:text-pink-500 transition-colors"
                 aria-label="Instagram"
               >
                 <InstagramIcon />
@@ -78,7 +78,7 @@ export function Footer() {
               <a
                 href="https://www.facebook.com/CraigDuToitNelPage"
                 target="_blank" rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white/60 hover:bg-pink-500 hover:text-white text-charcoal/60 border border-pink-200 transition-colors"
+                className="text-charcoal/50 hover:text-pink-500 transition-colors"
                 aria-label="Facebook"
               >
                 <FacebookIcon />
@@ -86,7 +86,7 @@ export function Footer() {
               <a
                 href="https://www.tiktok.com/@craigdutoitnel"
                 target="_blank" rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white/60 hover:bg-charcoal hover:text-white text-charcoal/60 border border-pink-200 transition-colors"
+                className="text-charcoal/50 hover:text-charcoal transition-colors"
                 aria-label="TikTok"
               >
                 <TikTokIcon />
