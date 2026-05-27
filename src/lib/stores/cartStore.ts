@@ -1,7 +1,7 @@
 "use client";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import type { CartItem, CartStore, Product } from "@/types";
+import type { CartStore, Product } from "@/types";
 
 export const useCartStore = create<CartStore>()(
   persist(
